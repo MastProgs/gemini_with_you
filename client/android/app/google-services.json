@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "661325520228",
+    "project_id": "gemini-with-you",
+    "storage_bucket": "gemini-with-you.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:661325520228:android:219838fe4622c852362e71",
+        "android_client_info": {
+          "package_name": "com.example.client"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNycj3oUHE9MZbJGtqyW3nP8_XWgLKG1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
