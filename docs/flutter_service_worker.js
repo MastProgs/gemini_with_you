@@ -17,8 +17,8 @@ const RESOURCES = {"assets/AssetManifest.bin": "dbb339e4929791590782a12789ec251b
 "assets/assets/lottie/thinking.json": "d214a4d05a4136e27de8909098507d73",
 "assets/assets/lottie/thumbs_up.json": "a370d4f0cb491a0e3d4d5561b6c38763",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "664293a6b3244cd79abb230ef970d2e6",
-"assets/NOTICES": "d69425e26b742e0c9f9137eb74323c27",
+"assets/fonts/MaterialIcons-Regular.otf": "7d848adb1c59810b797e68de2bb7038d",
+"assets/NOTICES": "26be92f412626c1101aedd8852e4a1a7",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "e986ebe42ef785b27164c36a9abc7818",
 "assets/shaders/ink_sparkle.frag": "ecc85a2e95f5e9f53123dcaf8cb9b6ce",
 "canvaskit/canvaskit.js": "c86fbd9e7b17accae76e5ad116583dc4",
@@ -37,9 +37,9 @@ const RESOURCES = {"assets/AssetManifest.bin": "dbb339e4929791590782a12789ec251b
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
-"index.html": "6df214fa8a6cd8cd1ffa5c50fab6cd81",
-"/": "6df214fa8a6cd8cd1ffa5c50fab6cd81",
-"main.dart.js": "c482c7a32829566805c0272ff74847dc",
+"index.html": "ee46e358b408aef94724a49f552279af",
+"/": "ee46e358b408aef94724a49f552279af",
+"main.dart.js": "66be7b1eceb4906da15fa2ca49a8618f",
 "manifest.json": "e3653540279937c106d10c2f3fa0b1ba",
 "version.json": "6dfbd941664e53f6173f53383139b86c"};
 // The application shell files that are downloaded before a service worker can

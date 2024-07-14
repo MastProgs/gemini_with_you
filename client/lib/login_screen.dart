@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -167,6 +168,53 @@ class _LoginPageState extends State<LoginPage> {
     });
   }
 
+  void _showApiKeyInstructions() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('How to create Gemini API key'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text('1. Click the link below to go to Google AI Studio.'),
+              InkWell(
+                child: const Text(
+                  'https://aistudio.google.com/app/apikey',
+                  style: TextStyle(
+                      color: Colors.blue, decoration: TextDecoration.underline),
+                ),
+                onTap: () =>
+                    _launchUrl('https://aistudio.google.com/app/apikey'),
+              ),
+              const SizedBox(height: 10),
+              const Text('2. Sign in with your Google account.'),
+              const Text('3. Click the "Create API Key" button.'),
+              const Text('4. Copy the generated API key and paste it here.'),
+            ],
+          ),
+          actions: <Widget>[
+            TextButton(
+              child: const Text('확인'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _launchUrl(String url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -203,10 +251,13 @@ class _LoginPageState extends State<LoginPage> {
             ),
             TextField(
               controller: apiKeyController,
-              decoration: const InputDecoration(
+              decoration: InputDecoration(
                 labelText: 'Gemini API Key',
-                hintText:
-                    'If you have already registered, leave it blank. If an API key exists at login time, overwrites the existing API key value.',
+                hintText: 'If you have no API key, click here.',
+                suffixIcon: IconButton(
+                  icon: const Icon(Icons.help_outline),
+                  onPressed: _showApiKeyInstructions,
+                ),
               ),
               inputFormatters: [
                 FilteringTextInputFormatter.allow(RegExp(r'[a-zA-Z0-9_\-.]')),
