@@ -1,6 +1,6 @@
 cd ./client
 
-call flutter build web --web-renderer canvaskit --release
+call flutter build web --web-renderer html --release
 
 
 cd ..
